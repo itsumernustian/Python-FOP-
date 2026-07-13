@@ -1,9 +1,14 @@
 import re
+import string
+alphabets = set(string.ascii_lowercase)
 def panagram(words):
-    matched=re.findall(r'[A-Za-z]',words)
-    if matched:
+    lower = words.lower()
+    wordSet= set(lower)
+    print(wordSet)
+    if wordSet >= alphabets:
         print("Panagram")
     else:
         print("Not a panagram")
         
-panagram("The  lazy do")
+str ="The quick brown fox jumps over the lazy dog"
+panagram(str)
